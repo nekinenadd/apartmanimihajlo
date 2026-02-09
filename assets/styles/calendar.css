@@ -1,0 +1,102 @@
+:root {
+  --accent: #91693B;   /* dark brown */
+  --highlight: #ECDFC0; /* light cream */
+  --bg: #ffffff;       /* white background */
+  --text: #111111;     /* default text color */
+}
+
+/* Container */
+.booking-page {
+  max-width: 420px;
+  margin: auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Kalendar */
+.calendar-container {
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 1rem;
+  background: var(--highlight);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.calendar-header button {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.day.available { background: var(--bg); }
+.day.booked { background: #FFD6D6; color: #999; cursor: not-allowed; }
+.day.selected { background: var(--accent); color: var(--bg); }
+.day.in-range { background: #DCC2A0; }
+
+/* Forma za upit */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.booking-form input {
+  padding: 10px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.booking-form button {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.booking-form button:hover {
+  background: #6f4f30; /* tamnija varijanta akcenta */
+}
+
+@media (min-width: 768px) {
+  .booking-page { padding: 2rem; }
+}
