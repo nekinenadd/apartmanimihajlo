@@ -94,7 +94,7 @@ h1 {
 }
 
 .booking-form button:hover {
-  background: #6f4f30; /* tamnija varijanta akcenta */
+  background: #6f4f30;
 }
 
 @media (min-width: 768px) {

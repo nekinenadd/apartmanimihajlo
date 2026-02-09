@@ -5,8 +5,11 @@ let currentDate = new Date();
 let startDate = null;
 let endDate = null;
 
-// PRIMER ZAUZETIH DATUMA (možeš dodati svoje)
+// Zauzeti datumi (kasnije dodaj potvrđene bukinge)
 const bookedDates = [
+  "2026-02-15",
+  "2026-02-16",
+  "2026-03-05"
 ];
 
 function formatDate(date) {
@@ -27,7 +30,6 @@ function renderCalendar() {
   const firstDay = new Date(year, month, 1).getDay() || 7;
   const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-  // prazna polja
   for (let i = 1; i < firstDay; i++) {
     calendarEl.appendChild(document.createElement("div"));
   }
@@ -47,13 +49,8 @@ function renderCalendar() {
       div.onclick = () => selectDate(dateStr);
     }
 
-    if (dateStr === startDate || dateStr === endDate) {
-      div.classList.add("selected");
-    }
-
-    if (startDate && endDate && dateStr > startDate && dateStr < endDate) {
-      div.classList.add("in-range");
-    }
+    if (dateStr === startDate || dateStr === endDate) div.classList.add("selected");
+    if (startDate && endDate && dateStr > startDate && dateStr < endDate) div.classList.add("in-range");
 
     calendarEl.appendChild(div);
   }
@@ -75,7 +72,6 @@ function selectDate(dateStr) {
   renderCalendar();
 }
 
-// PREV / NEXT mesec
 document.getElementById("prevMonth").onclick = () => {
   currentDate.setMonth(currentDate.getMonth() - 1);
   renderCalendar();
