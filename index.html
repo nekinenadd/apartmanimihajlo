@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rental Apartment</title>
+
+  <!-- Bootstrap 5 -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+
+  <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+<div id="bubble-nav"></div>
+
+<body>
+
+  <!-- first section -->
+
+<section class="hero-carousel">
+  <div class="carousel-track">
+    <div class="carousel-slide active">
+      <img src="assets/media/terasabrend.jpg" alt="Apartments exterior">
+    </div>
+    <div class="carousel-slide">
+      <img src="assets/media/spavacasabrendom.jpg" alt="Apartment interior">
+    </div>
+    <div class="carousel-slide">
+      <img src="assets/media/masaza2.png" alt="View from apartment">
+    </div>
+  </div>
+
+  <!-- Optional overlay text -->
+  <div class="hero-overlay">
+    <h1>LOGO</h1>
+    <p>LOGO</p>
+  </div>
+</section>
+
+
+<section class="customer-care py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left: Image / Brand touch -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="assets/media/brendjastuk.jpg" alt="Customer towels" class="care-img">
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-md-6 care-text">
+        <h2>Briga o našim gostima</h2>
+        <p>
+          Kod nas svaki detalj ima smisla — od personalizovanih peškira sa brendom do pažnje koju posvećujemo svakom gostu. 
+          Vaše zadovoljstvo je naš prioritet.
+        </p>
+      </div>
+    </div>
+
+    <!-- Reviews Carousel -->
+    <div class="reviews mt-5">
+      <h3 class="text-center mb-4">Šta naši gosti kažu</h3>
+      <div class="review-track">
+        <div class="review">"Apartmani Mihajlo su fenomenalni, sve je savršeno!"</div>
+        <div class="review">"Uživali smo u svakoj sekundi boravka. Preporuka!"</div>
+        <div class="review">"Odlično opremljeno, higijena na visokom nivou."</div>
+        <div class="review">"Toplo preporučujem, osoblje je ljubazno i pažljivo."</div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- second? section -->
+
+<section class="hero-apartment py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left: Building Image -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="assets/media/firstsectionpic.jpg" alt="Apartments Mihajlo" class="hero-img">
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-md-6 hero-text">
+        <h1>Dobrodošli na Apartmani Mihajlo</h1>
+        <p>
+          Uživajte u komforu našeg objekta, sa vrhunskim sadržajima uključujući teretanu, saunu i masaže.
+        </p>
+        <a href="#" class="btn btn-hero">Katalog</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- SPA I GYM -->
+<section class="amenities py-5">
+  <div class="container text-center">
+    <h2>Wellness u okviru objekta</h2>
+    <p class="amenities-sub">
+      Teretana i spa dostupni našim gostima za potpunu relaksaciju.
+    </p>
+
+    <div class="amenities-grid">
+      <!-- Gym Card -->
+      <div class="amenity-card" data-modal="gymModal">
+        <img src="assets/media/teretana2.png" alt="Gym">
+        <span>Teretana</span>
+      </div>
+
+      <!-- Spa Card -->
+      <div class="amenity-card" data-modal="spaModal">
+        <img src="assets/media/sauna.png" alt="Spa">
+        <span>Spa & Sauna</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="amenity-modal" id="gymModal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+
+    <div class="modal-carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+
+      <div class="modal-track">
+        <div class="modal-slide"><img src="assets/media/teretana.png"></div>
+        <div class="modal-slide"><img src="assets/media/teretana2.png"></div>
+        <div class="modal-slide"><img src="assets/media/teretana3.png"></div>
+      </div>
+
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="amenity-modal" id="spaModal">
+  <div class="modal-content">
+    <button class="modal-close">&times;</button>
+
+    <div class="modal-carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+
+      <div class="modal-track">
+        <div class="modal-slide"><img src="assets/media/sauna.png"></div>
+        <div class="modal-slide"><img src="assets/media/masaza.png"></div>
+        <div class="modal-slide"><img src="assets/media/sauna2.png"></div>
+        <div class="modal-slide"><img src="assets/media/bazen.png"></div>
+        <div class="modal-slide"><img src="assets/media/bazen4.png"></div>
+        <div class="modal-slide"><img src="assets/media/saunavaljda.png"></div>
+      </div>
+
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+
+<section class="reserve-section py-5">
+  <div class="container reserve-wrap text-center">
+
+    <!-- iPhone mockup -->
+    <div class="phone-mockup fade-in">
+      <img src="assets/media/TELEFON NENAD.png" alt="Instagram">
+    </div>
+
+    <!-- CTA Button -->
+    <button class="reserve-btn fade-in" id="openReserveModal">
+      Rezerviši
+    </button>
+
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="reserve-modal" id="reserveModal">
+  <div class="reserve-modal-content">
+    <span class="close-modal">&times;</span>
+
+    <a href="https://instagram.com" target="_blank" class="reserve-option">Instagram</a>
+    <a href="https://wa.me/123456789" target="_blank" class="reserve-option">WhatsApp</a>
+    <a href="https://example.com" target="_blank" class="reserve-option">Website</a>
+    <a href="https://booking.com" target="_blank" class="reserve-option">Booking</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <!-- Bootstrap JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main JS -->
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
