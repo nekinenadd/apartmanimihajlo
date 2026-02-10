@@ -1,6 +1,6 @@
 :root {
-  --accent: #91693B; /* dark brown */
-  --highlight: #ECDFC0; /* light cream */
+  --accent: #906A3A; /* dark brown */
+  --highlight: #EfDEBB; /* light cream */
   --bg: #ffffff; /* white background */
   --text: #111111; /* default text color */
 }
@@ -14,6 +14,7 @@ body {
 /* Page content */
 .page-content {
   padding-bottom: 120px; /* space for bubble nav */
+  padding-bottom: 0;
 }
 
 .hero {
@@ -28,17 +29,20 @@ body {
 /* Bubble nav */
 .bubble-nav {
   position: fixed;
-  bottom: env(safe-area-inset-bottom, 16px);
+  top: env(safe-area-inset-top, 16px);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 1.2rem;
   padding: 0.7rem 1.2rem;
-  background: var(--bubble);
-  backdrop-filter: blur(20px);
+  background: rgba(236, 223, 192, 0.54); /* highlight glass */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(px);
   border-radius: 999px;
   z-index: 1000;
+  box-shadow: 0 10px 30px rgba(145, 105, 59, 0.25);
 }
+
 
 /* Buttons */
 .nav-btn {
@@ -80,7 +84,7 @@ body {
 
 .nav-btn.active {
   background: var(--accent);
-  color: #000;
+  color: #fff;
 }
 /* First? section */
 
@@ -593,7 +597,12 @@ body {
 Reserve Section
 ----------------------------- */
 .reserve-section {
-  background: #ffffff;
+  background: linear-gradient(
+    135deg,
+    var(--highlight) 0%,
+    #f5ecd7 35%,
+    var(--accent) 100%
+  );
   overflow: hidden;
   padding: 4rem 1rem;
 }
