@@ -261,25 +261,33 @@ body {
 
 /* HERO SECTION */
 .hero-section {
-  position: relative;
   min-height: 100vh;
   background: linear-gradient(
     154deg,
     rgba(144, 106, 58, 1) 0%,
     rgba(239, 222, 187, 1) 100%
   );
-  overflow: hidden;
   display: flex;
   align-items: center;
 }
 
-/* CONTENT */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
 .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 720px;
+  max-width: 640px;
   color: #3b2a18;
 }
+
+.hero-image img {
+  max-width: 100%;
+  max-height: 80vh;
+  display: block;
+}
+
 
 /* EYEBROW TEXT */
 .hero-eyebrow {
@@ -313,29 +321,20 @@ body {
   opacity: 0.95;
 }
 
-/* BUILDING PNG */
-.hero-building {
-  position: absolute;
-  bottom: 0;
-  right: 5%;
-  max-height: 80vh;
-  z-index: 1;
-  pointer-events: none;
-}
 
 /* MOBILE */
+
 @media (max-width: 768px) {
-  .hero-section {
-    padding-top: 6rem;
+  .hero-inner {
+    flex-direction: column;
+    text-align: left;
   }
 
-  .hero-building {
-    max-height: 55vh;
-    right: 50%;
-    transform: translateX(50%);
-    opacity: 0.9;
+  .hero-image img {
+    max-height: 50vh;
   }
 }
+
 
 
 /* First? section */
@@ -971,3 +970,71 @@ Responsive / Desktop
     transform: translateY(0);
   }
 }
+
+
+
+/* FEATURES SECTION */
+.features-section {
+  background: #ffffff;
+}
+
+.features-title {
+  color: #91693B;
+  margin-bottom: 0.5rem;
+}
+
+.features-sub {
+  color: #6f5a3a;
+  margin-bottom: 3rem;
+}
+
+/* GRID */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+/* CARD */
+.feature-card {
+  background: #f9f7f4;
+  border-radius: 1.4rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border: 1px solid rgba(145, 105, 59, 0.15);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* ICON */
+.feature-icon {
+  font-size: 2.6rem;
+  margin-bottom: 1.2rem;
+}
+
+/* TITLE */
+.feature-title {
+  color: #91693B;
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+/* TEXT */
+.feature-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5a4a32;
+}
+
+/* HOVER */
+@media (hover: hover) {
+  .feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(145, 105, 59, 0.25);
+    border-color: rgba(145, 105, 59, 0.35);
+  }
+}
+
+
