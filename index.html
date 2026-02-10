@@ -18,81 +18,191 @@
 
 <body>
 
+  <!-- navbar -->
+
+<section class="navbar-section">
+  <nav class="navbar">
+
+    <!-- LEFT -->
+    <div class="nav-left">
+      <img src="assets/media/Tamno braon logo Zlatibor.jpg" alt="Apartmani Mihajlo" class="nav-logo">
+      <span class="nav-title">Apartmani Mihajlo</span>
+    </div>
+
+    <!-- CENTER (desktop) -->
+    <div class="nav-center">
+      <a href="/" class="nav-link active">Početna</a>
+      <a href="#amenities" class="nav-link">Sadržaji</a>
+      <a href="#contact" class="nav-link">Kontakt</a>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="nav-right">
+      <a href="/book.html" class="nav-book-btn">Rezerviši</a>
+
+      <button class="nav-menu-btn" id="openSidebar" aria-label="Menu">
+        ☰
+      </button>
+    </div>
+
+  </nav>
+</section>
+
+<!-- MOBILE SIDEBAR -->
+<div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
+
+<aside class="mobile-sidebar" id="mobileSidebar">
+  <button class="close-sidebar" id="closeSidebar">&times;</button>
+
+  <a href="/" class="mobile-nav-link book active">Početna</a>
+  <a href="#amenities" class="mobile-nav-link book">Sadržaji</a>
+  <a href="#amenities" class="mobile-nav-link book">Knjiga utisaka</a>
+  <a href="/book.html" class="mobile-nav-link book">Rezerviši</a>
+</aside>
+
+
   <!-- first section -->
 
-<section class="hero-carousel">
-  <div class="carousel-track">
-    <div class="carousel-slide active">
-      <img src="assets/media/terasabrend.jpg" alt="Apartments exterior">
-    </div>
-    <div class="carousel-slide">
-      <img src="assets/media/spavacasabrendom.jpg" alt="Apartment interior">
-    </div>
-    <div class="carousel-slide">
-      <img src="assets/media/masaza2.png" alt="View from apartment">
-    </div>
+
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content container">
+    <p class="hero-eyebrow">
+      Odmor koji zaista prija
+    </p>
+
+    <h1 class="hero-title">
+      Apartmani na Zlatiboru u kompleksu
+      <span class="hero-highlight">Kalman</span>
+    </h1>
+
+    <p class="hero-description">
+      Moderni i potpuno opremljeni apartmani na Zlatiboru.
+      Idealni za parove, porodice i sve koji traže mir,
+      prirodu i udoban boravak.
+      <br><br>
+      Transparentne cene - bez skrivenih troškova.
+    </p>
   </div>
 
-  <!-- Optional overlay text -->
-  <div class="hero-overlay">
-    <h1>LOGO</h1>
-    <p>LOGO</p>
-  </div>
+  <!-- BUILDING PNG (added later) -->
+  <img
+    src="assets/media/ZGRADA ZA LANDING PAGE.png"
+    alt="Kalman kompleks"
+    class="hero-building"
+  />
 </section>
 
+  <!-- first section end -->
 
-<section class="customer-care py-5">
+  <!-- recenzije section -->
+
+  <section class="customer-care py-5">
   <div class="container">
-    <div class="row align-items-center">
-      <!-- Left: Image / Brand touch -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="assets/media/brendjastuk.jpg" alt="Customer towels" class="care-img">
-      </div>
-
-      <!-- Right: Text -->
-      <div class="col-md-6 care-text">
-        <h2>Briga o našim gostima</h2>
-        <p>
-          Kod nas svaki detalj ima smisla — od personalizovanih peškira sa brendom do pažnje koju posvećujemo svakom gostu. 
-          Vaše zadovoljstvo je naš prioritet.
-        </p>
-      </div>
-    </div>
-
     <!-- Reviews Carousel -->
     <div class="reviews mt-5">
-      <h3 class="text-center mb-4">Šta naši gosti kažu</h3>
-      <div class="review-track">
-        <div class="review">"Apartmani Mihajlo su fenomenalni, sve je savršeno!"</div>
-        <div class="review">"Uživali smo u svakoj sekundi boravka. Preporuka!"</div>
-        <div class="review">"Odlično opremljeno, higijena na visokom nivou."</div>
-        <div class="review">"Toplo preporučujem, osoblje je ljubazno i pažljivo."</div>
+  <h3 class="text-center mb-4">Šta naši gosti kažu</h3>
+  <div class="review-track">
+
+    <div class="review">
+      <img src="assets/media/recenzije/1.png" alt="Guest review screenshot">
+    </div>
+
+    <div class="review">
+      <img src="assets/media/recenzije/2.png" alt="Guest review screenshot">
+    </div>
+
+    <div class="review">
+      <img src="assets/media/recenzije/3.png" alt="Guest review screenshot">
+    </div>
+
+    <div class="review">
+      <img src="assets/media/recenzije/4.png" alt="Guest review screenshot">
+    </div>
+    <div class="review">
+      <img src="assets/media/recenzije/5.png" alt="Guest review screenshot">
+    </div>
+    <div class="review">
+      <img src="assets/media/recenzije/8.png" alt="Guest review screenshot">
+    </div>
+    <div class="review">
+      <img src="assets/media/recenzije/9.png" alt="Guest review screenshot">
+    </div>
+    <div class="review">
+      <img src="assets/media/recenzije/10.png" alt="Guest review screenshot">
+    </div>
+    <div class="review">
+      <img src="assets/media/recenzije/11.png" alt="Guest review screenshot">
+    </div>
+    <div class="review">
+      <img src="assets/media/recenzije/12.png" alt="Guest review screenshot">
+    </div>
+
+
+  </div>
+    </div>
+
+    
+  </div>
+  </section>
+
+  <!-- recenzije section end -->
+
+  <!-- DVA APARTMANA -->
+  <section class="amenities py-5">
+  <div class="container text-center">
+    <h2>Ponuda apartmana</h2>
+    <p class="amenities-sub">
+      Oba apartmana se nalaze u Kalman kompleksu.
+    </p>
+
+    <div class="amenities-grid">
+      <!-- Mihajlo -->
+      <div class="amenity-card" data-modal="gymModal">
+        <img src="assets/media/11.jpg" alt="Gym">
+        <span>Mihajlo</span>
+      </div>
+
+      <!-- Casablanca -->
+      <div class="amenity-card" data-modal="spaModal">
+        <img src="assets/media/16.jpg" alt="Spa">
+        <span>Casablanca</span>
       </div>
     </div>
   </div>
-</section>
-  <!-- second? section -->
+  </section>
 
-<section class="hero-apartment py-5">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Left: Building Image -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="assets/media/firstsectionpic.jpg" alt="Apartments Mihajlo" class="hero-img">
-      </div>
+  <!-- DVA APARTMANA end -->
 
-      <!-- Right: Text -->
-      <div class="col-md-6 hero-text">
-        <h1>Dobrodošli na Apartmani Mihajlo</h1>
-        <p>
-          Uživajte u komforu našeg objekta, sa vrhunskim sadržajima uključujući teretanu, saunu i masaže.
-        </p>
-        <a href="#" class="btn btn-hero">Katalog</a>
-      </div>
-    </div>
+
+  <!-- third section statement under apartmans -->
+<section class="third-section">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content container">
+    <p class="hero-eyebrow">
+      Više od smeštaja. Pravi odmor.
+    </p>
+
+    <h1 class="hero-title">
+      Ucini tvoj boravak potpunim.
+    </h1>
+
+    <p class="hero-description">
+      Boravkom u našim apartmanima na Zlatiboru imaš pristup Kalman SPA centru i teretani,
+      savršenim za opuštanje i aktivan odmor.
+      Uz bazen, saune, hidromasažu i moderno opremljenu teretanu, svaki dan možeš prilagoditi
+      svom ritmu.
+      <br><br>
+    </p>
+    <p class="hero-eyebrow">
+      Svi naši gosti ostvaruju 50% popusta na korišćenje SPA centra i teretane.
+      Jedna pogodnost više koja tvoj boravak čini potpunim.
+    </p>
   </div>
 </section>
-
+  <!-- third section statement under apartmans -->
 
 
 

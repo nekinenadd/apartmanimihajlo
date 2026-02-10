@@ -1,26 +1,21 @@
-fetch("assets/components/bubble-nav.html?v=" + Date.now())
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("bubble-nav").innerHTML = html;
+const openSidebar = document.getElementById("openSidebar");
+const closeSidebar = document.getElementById("closeSidebar");
+const sidebar = document.getElementById("mobileSidebar");
+const overlay = document.getElementById("sidebarOverlay");
 
-    const path = window.location.pathname;
-    const navButtons = document.querySelectorAll(".bubble-nav a");
+openSidebar.addEventListener("click", () => {
+  sidebar.classList.add("active");
+  overlay.classList.add("active");
+});
 
-    navButtons.forEach(btn => btn.classList.remove("active"));
+closeSidebar.addEventListener("click", closeMenu);
+overlay.addEventListener("click", closeMenu);
 
-    navButtons.forEach(btn => {
-      let href = btn.getAttribute("href");
+function closeMenu() {
+  sidebar.classList.remove("active");
+  overlay.classList.remove("active");
+}
 
-      // Treat / and /index.html as the same page
-      const normalizedPath = path === "/" ? "/index.html" : path;
-      const normalizedHref = href === "/" ? "/index.html" : href;
-
-      if (normalizedPath === normalizedHref) {
-        btn.classList.add("active");
-      }
-    });
-  })
-  .catch(err => console.error("Failed to load nav:", err));
 
 
 
