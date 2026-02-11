@@ -185,3 +185,71 @@ openReserveBtn.addEventListener("click", () => {
     option.style.animation = "";
   });
 });
+
+
+
+const galleries = {
+  spa: [
+    "assets/media/spa3.png",
+    "assets/media/spa4.png",
+    "assets/media/spa5.png",
+    "assets/media/spa6.png",
+    "assets/media/spa7.png",
+    "assets/media/spa8.png",
+  ],
+  gym: [
+    "assets/media/gym1.png",
+    "assets/media/gym2.png",
+    "assets/media/gym3.png",
+    "assets/media/gym4.png",
+  ],
+  pool: [
+    "assets/media/bazen1.png",
+    "assets/media/bazen2.png",
+    "assets/media/bazen3.png",
+  ],
+};
+
+const modal = document.getElementById("galleryModal");
+const grid = document.getElementById("galleryGrid");
+const closeBtn = document.querySelector(".gallery-close");
+
+document.querySelectorAll("[data-gallery]").forEach(card => {
+  card.addEventListener("click", () => {
+    const type = card.dataset.gallery;
+    openGallery(type);
+  });
+});
+
+function openGallery(type) {
+  grid.innerHTML = "";
+  galleries[type].forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    grid.appendChild(img);
+  });
+  modal.classList.add("active");
+}
+
+closeBtn.addEventListener("click", closeGallery);
+modal.addEventListener("click", e => {
+  if (e.target === modal) closeGallery();
+});
+
+function closeGallery() {
+  modal.classList.remove("active");
+}
+
+
+document.querySelectorAll(".site-faq__question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+
+    document.querySelectorAll(".site-faq__item").forEach(i => {
+      if (i !== item) i.classList.remove("active");
+    });
+
+    item.classList.toggle("active");
+  });
+});
+

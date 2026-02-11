@@ -304,6 +304,7 @@ body {
   line-height: 1.15;
   font-weight: 400;
   margin-bottom: 1.4rem;
+
 }
 
 /* KALMAN HIGHLIGHT */
@@ -410,6 +411,7 @@ body {
 /* Second end ? section */
 
 .third-section {
+  gap: 10px;
   position: relative;
   min-height: 100vh;
   background: linear-gradient(
@@ -458,6 +460,7 @@ body {
   position: relative;
   overflow: hidden;
   white-space: nowrap;
+  color: var(--accent);
 }
 
 .review-track {
@@ -528,6 +531,7 @@ body {
 
 .amenities {
   background: #ffffff;
+  gap: 10px;
 }
 
 .amenities h2 {
@@ -837,6 +841,17 @@ Reserve Section
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
 }
 
+.mac-mockup {
+  max-width: 480px;
+  width: 100%;
+} 
+
+.mac-mockup img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+} 
+
 /* Rezerviši button */
 .reserve-btn {
   background: #91693B;
@@ -1036,5 +1051,159 @@ Responsive / Desktop
     border-color: rgba(145, 105, 59, 0.35);
   }
 }
+
+
+/* CLICKABLE CARD */
+.feature-card--clickable {
+  cursor: pointer;
+}
+
+.feature-gallery-btn {
+  margin-top: 1.2rem;
+  background: transparent;
+  border: 1px solid rgba(145,105,59,0.4);
+  color: #91693B;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.feature-gallery-btn:hover {
+  background: #91693B;
+  color: #ECDFC0;
+}
+
+/* MODAL */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.gallery-modal.active {
+  display: flex;
+}
+
+/* CONTENT */
+.gallery-modal-content {
+  background: #f9f7f4;
+  width: min(1200px, 92%);
+  max-height: 85vh;
+  border-radius: 1.4rem;
+  padding: 2rem;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* CLOSE */
+.gallery-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #91693B;
+  cursor: pointer;
+}
+
+/* GRID */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+
+
+
+.site-faq {
+  padding: 5rem 1.5rem;
+  background: #f9f7f4;
+}
+
+.site-faq__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+}
+
+
+.site-faq__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.site-faq__title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #2b2b2b;
+}
+
+.site-faq__item {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.site-faq__question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.4rem 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #2b2b2b;
+}
+
+.site-faq__icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.site-faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.site-faq__item.active .site-faq__answer {
+  max-height: 200px;
+  padding-bottom: 1.2rem;
+}
+
+.site-faq__item.active .site-faq__icon {
+  transform: rotate(45deg);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .site-faq__title {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+
 
 

@@ -107,7 +107,7 @@
   <div class="container">
     <!-- Reviews Carousel -->
     <div class="reviews mt-5">
-      <h3 class="text-center mb-4">Šta naši gosti kažu</h3>
+      <h3 class="text-center mb-4">Šta naši gosti kažu o nama</h3>
       <div class="review-track">
 
         <div class="review">
@@ -199,29 +199,29 @@
       <button class="carousel-btn next">&#10095;</button>
     </div>
   </div>
-</div>
+  </div>
 
 
-<div class="amenity-modal" id="spaModal">
-  <div class="modal-content">
-    <button class="modal-close">&times;</button>
+  <div class="amenity-modal" id="spaModal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
 
-    <div class="modal-carousel">
-      <button class="carousel-btn prev">&#10094;</button>
+      <div class="modal-carousel">
+        <button class="carousel-btn prev">&#10094;</button>
 
-      <div class="modal-track">
-        <div class="modal-slide"><img src="assets/media/sauna.png"></div>
-        <div class="modal-slide"><img src="assets/media/masaza.png"></div>
-        <div class="modal-slide"><img src="assets/media/sauna2.png"></div>
-        <div class="modal-slide"><img src="assets/media/bazen.png"></div>
-        <div class="modal-slide"><img src="assets/media/bazen4.png"></div>
-        <div class="modal-slide"><img src="assets/media/saunavaljda.png"></div>
+        <div class="modal-track">
+          <div class="modal-slide"><img src="assets/media/sauna.png"></div>
+          <div class="modal-slide"><img src="assets/media/masaza.png"></div>
+          <div class="modal-slide"><img src="assets/media/sauna2.png"></div>
+          <div class="modal-slide"><img src="assets/media/bazen.png"></div>
+          <div class="modal-slide"><img src="assets/media/bazen4.png"></div>
+          <div class="modal-slide"><img src="assets/media/saunavaljda.png"></div>
+        </div>
+
+        <button class="carousel-btn next">&#10095;</button>
       </div>
-
-      <button class="carousel-btn next">&#10095;</button>
     </div>
   </div>
-</div>
 
   <!-- DVA APARTMANA end -->
 
@@ -274,34 +274,48 @@
         </p>
       </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">💆‍♂️</div>
-        <h3 class="feature-title">Spa & Wellness</h3>
-        <p class="feature-text">
-          Zona za opuštanje sa saunom i sadržajima za relaksaciju.
-        </p>
-      </div>
+     <div class="feature-card feature-card--clickable" data-gallery="spa">
+      <div class="feature-icon">💆‍♂️</div>
+      <h3 class="feature-title">Spa & Wellness</h3>
+      <p class="feature-text">
+        Zona za opuštanje sa saunom i sadržajima za relaksaciju.
+      </p>
+      <button class="feature-gallery-btn">Pogledaj galeriju</button>
+    </div>
 
-      <div class="feature-card">
+      <div class="feature-card feature-card--clickable" data-gallery="pool">
         <div class="feature-icon">🏊‍♂️</div>
         <h3 class="feature-title">Bazen</h3>
         <p class="feature-text">
           Unutrašnji bazen idealan za odmor u svim godišnjim dobima.
         </p>
+        <button class="feature-gallery-btn">Pogledaj galeriju</button>
       </div>
 
-      <div class="feature-card">
+      <div class="feature-card feature-card--clickable" data-gallery="gym">
         <div class="feature-icon">🏋️‍♂️</div>
         <h3 class="feature-title">Fitnes centar</h3>
         <p class="feature-text">
           Moderno opremljen prostor za trening i rekreaciju.
         </p>
+        <button class="feature-gallery-btn">Pogledaj galeriju</button>
       </div>
 
     </div>
+
+    <div class="gallery-modal" id="galleryModal">
+  <div class="gallery-modal-content">
+    <button class="gallery-close">&times;</button>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- images injected by JS -->
+    </div>
+  </div>
+</div>
+
+
   </div>
 </section>
-
 
 
   <!-- SPA GYM PARKING BAZEN end -->
@@ -317,8 +331,21 @@
 
     <!-- CTA Button -->
     <button class="reserve-btn fade-in" id="openReserveModal">
-      Rezerviši
+      Zapratite nas na drustvenim mrezama
     </button>
+
+    <div class="mac-mockup fade-in">
+      <img src="assets/media/LAPTOP SLIKA 5 ZVEZDICA.png" alt="Instagram">
+    </div>
+
+     <!-- CTA Button -->
+    <a href="https://g.page/r/CaLwDgajZjWgEAI/review" target="_blank" rel="noopener">
+      <button class="reserve-btn fade-in">
+        Ocenite nas na Google-u
+      </button>
+    </a>
+
+
 
   </div>
 </section>
@@ -334,6 +361,110 @@
     <a href="https://booking.com" target="_blank" class="reserve-option">Booking</a>
   </div>
 </div>
+
+
+<!-- FAQ  -->
+
+<section class="site-faq">
+  <div class="site-faq__container">
+    <h2 class="site-faq__title">Često postavljana pitanja</h2>
+
+    <div class="site-faq__list">
+
+      <div class="site-faq__item">
+        <button class="site-faq__question">
+          Gde se nalaze apartmani?
+          <span class="site-faq__icon">+</span>
+        </button>
+        <div class="site-faq__answer">
+          Apartmani se nalaze na Zlatiboru, na odličnoj lokaciji u blizini prodavnica, restorana i kafića,
+Zlatiborske pijace, gondole i Zlatiborskog jezera, sa lakim pristupom svim glavnim
+sadržajima.
+        </div>
+      </div>
+
+      <div class="site-faq__item">
+        <button class="site-faq__question">
+          Da li je fitnes centar dostupan svim gostima?
+          <span class="site-faq__icon">+</span>
+        </button>
+        <div class="site-faq__answer">
+          Fitnes centar je na raspolaganju svim gostima bez dodatnih troškova.
+        </div>
+      </div>
+
+      <div class="site-faq__item">
+        <button class="site-faq__question">
+          Kako možete da rezervišete boravak?
+          <span class="site-faq__icon">+</span>
+        </button>
+        <div class="site-faq__answer">
+          Rezervaciju možete izvršiti putem mejla, porukom ili pozivom na sledeće brojeve telefona:
++381 65 876 9768 – Mihajlo
++381 65 802 1100 – Gorana
+        </div>
+      </div>
+
+      <div class="site-faq__item">
+        <button class="site-faq__question">
+          Da li je potrebna uplata avansa?
+          <span class="site-faq__icon">+</span>
+        </button>
+        <div class="site-faq__answer">
+          Da, potrebna je uplata avansa. Iznos avansa se naknadno dogovaramo prilikom potvrde
+rezervacije.
+        </div>
+      </div>
+
+      <div class="site-faq__item">
+        <button class="site-faq__question">
+          Da li je obezbeđen parking?
+          <span class="site-faq__icon">+</span>
+        </button>
+        <div class="site-faq__answer">
+          Da, ispred zgrade je obezbeđen besplatan parking. Pored toga, svaki apartman ima svoje
+garažno mesto koje je uključeno u cenu boravka i ne doplaćuje se posebno.
+        </div>
+      </div>
+
+      <div class="site-faq__item">
+        <button class="site-faq__question">
+          Da li su apartmani pogodni za porodice sa decom?
+          <span class="site-faq__icon">+</span>
+        </button>
+        <div class="site-faq__answer">
+          Da, apartmani su pogodni za boravak porodica i pružaju dovoljno prostora i komfora za
+prijatan odmor.
+        </div>
+      </div>
+
+      <div class="site-faq__item">
+        <button class="site-faq__question">
+          Da li je dozvoljen boravak kućnih ljubimaca?
+          <span class="site-faq__icon">+</span>
+        </button>
+        <div class="site-faq__answer">
+          Ne, boravak kućnih ljubimaca nije dozvoljen.
+        </div>
+      </div>
+
+      <div class="site-faq__item">
+        <button class="site-faq__question">
+          Kada je prijava i odjava iz apartmana?
+          <span class="site-faq__icon">+</span>
+        </button>
+        <div class="site-faq__answer">
+          Prijava u apartman je uobičajeno od 14h, dok je odjava do 10h. Postoji mogućnost
+prilagođavanja vremena prijave i odjave u skladu sa dostupnošću i potrebama gostiju, uz
+prethodni dogovor.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ END -->
 
 
   <!-- Bootstrap JS -->
