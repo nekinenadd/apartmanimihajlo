@@ -470,7 +470,7 @@ body {
 
 .review {
   min-width: 260px;
-  height: 280px;               /* controls card size */
+  height: 260px;               /* controls card size */
   margin-right: 1.5rem;
   background: #fff;
   border-radius: 1rem;
@@ -1271,3 +1271,13 @@ Responsive / Desktop
   background-color: #7a5830;
 }
 
+
+
+
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #906A3A, transparent);
+  margin: 60px 0;
+}
