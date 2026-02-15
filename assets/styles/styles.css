@@ -1204,6 +1204,70 @@ Responsive / Desktop
 
 
 
+.newsletter {
+  background-color: var(--highlight);
+  background: linear-gradient(
+    45deg,
+    var(--highlight) 0%,
+    #f5ecd7 35%,
+    var(--accent) 100%
+  );
+  padding: 80px 20px;
+  text-align: center;
+}
 
+.newsletter-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
+.newsletter h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.newsletter p {
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 14px 16px;
+  width: 280px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.newsletter-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(144, 106, 58, 0.2);
+}
+
+.newsletter-form button {
+  padding: 14px 24px;
+  background-color: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #7a5830;
+}
 
