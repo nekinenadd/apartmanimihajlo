@@ -458,25 +458,27 @@ body {
 
 .reviews {
   position: relative;
-  overflow: hidden;
-  white-space: nowrap;
+  overflow: hidden; 
   color: var(--accent);
 }
 
 .review-track {
+  width: max-content;
   display: flex;
-  animation: scrollReviews 20s linear infinite;
+  gap: 1.5rem;
+  overflow-x: auto;              /* omogućava swipe */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  animation: scrollReviews 25s linear infinite;
 }
-
 .review {
   min-width: 260px;
-  height: 260px;               /* controls card size */
-  margin-right: 1.5rem;
+  height: 260px;
   background: #fff;
   border-radius: 1rem;
   box-shadow: 0 8px 25px rgba(0,0,0,0.18);
   flex-shrink: 0;
-  overflow: hidden;
+  scroll-snap-align: start;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -491,11 +493,43 @@ body {
 }
 
 @media (max-width: 768px) {
+
+  .reviews {
+    overflow-x: auto;               /* omogućava swipe */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .review-track {
+    animation: none;                /* gasi auto scroll */
+    gap: 1rem;
+  }
+
   .review {
-    min-width: 180px;
-    height: 260px;
+    min-width: 250px;
+    scroll-snap-align: start;       /* snap efekat */
+  }
+
+  .review-track {
+    scroll-snap-type: x mandatory;  /* zaključavanje na karticu */
+  }
+
+  /* opcionalno – sakriva scrollbar */
+  .reviews::-webkit-scrollbar {
+    display: none;
   }
 }
+
+.review-track:hover {
+  animation-play-state: paused;
+}
+.review-track:active {
+  animation-play-state: paused;
+}
+.review-track::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 
 
