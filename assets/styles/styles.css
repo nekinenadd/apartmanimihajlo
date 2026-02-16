@@ -591,14 +591,38 @@ body {
   border-radius: 1.2rem;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 .amenity-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  transition: all 0.5s ease;
+  filter: blur(0.5px) brightness(0.6);
+}
+
+/* Dark overlay */
+.amenity-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  transition: opacity 0.4s ease;
+}
+
+/* Hover efekat */
+.amenity-card:hover img {
+  filter: blur(0px) brightness(1);
+  transform: scale(1.05);
+}
+
+.amenity-card:hover::after {
+  opacity: 0;
+}
+
+.amenity-card:hover {
+  transform: translateY(-8px);
 }
 
 .amenity-card span {
