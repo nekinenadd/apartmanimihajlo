@@ -255,9 +255,9 @@ document.querySelectorAll(".site-faq__question").forEach(btn => {
 
 
 
-// Inicijalizacija EmailJS
 (function(){
-  emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY); // zameni sa tvojim
+  // Direktno ubacujemo EmailJS public key
+  emailjs.init("_jsPMZFMRByyxKPi1"); // zameni sa tvojim ključem
 })();
 
 // Selektuj formu po ID-u
@@ -267,8 +267,8 @@ form.addEventListener("submit", function(event) {
   event.preventDefault(); // sprečava reload stranice
 
   emailjs.sendForm(
-    "service_27djwtk",    // zameni sa tvojim
-    "template_npu2r75",   // zameni sa tvojim
+    "service_27djwtk",    // zameni sa tvojim service ID
+    "template_npu2r75",   // zameni sa tvojim template ID
     this
   )
   .then(() => {
@@ -280,3 +280,7 @@ form.addEventListener("submit", function(event) {
     alert("Došlo je do greške pri slanju.");
   });
 });
+
+
+
+
