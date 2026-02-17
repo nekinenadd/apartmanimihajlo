@@ -596,10 +596,17 @@ body {
 
 .amenity-card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 280px;
+  object-fit: cover; /* default za mobilni */
   transition: all 0.5s ease;
-  filter: blur(0.5px) brightness(0.6);
+  filter: brightness(0.9);
+}
+
+/* Desktop verzija */
+@media (min-width: 992px) {
+  .amenity-card img {
+    object-fit: cover; /* slike popunjavaju celu karticu */
+  }
 }
 
 /* Dark overlay */

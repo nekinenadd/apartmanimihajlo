@@ -255,7 +255,7 @@ document.querySelectorAll(".site-faq__question").forEach(btn => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  emailjs.init("_jsPMZFMRByyxKPi1");
+  emailjs.init("_jsPMZFMRByyxKPi");
 
   const form = document.getElementById("newsletter-form");
   form.addEventListener("submit", function(event) {
