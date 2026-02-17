@@ -900,7 +900,7 @@ Reserve Section
 }
 
 .mac-mockup {
-  max-width: 480px;
+  max-width: 720px;
   width: 100%;
 } 
 
@@ -912,9 +912,9 @@ Reserve Section
 } 
 
 @media (min-width: 1024px) {
-  .mac-mockup {
-    max-width: none;
-    width: 80%;
+  .reserve-section .mac-mockup {
+    width: 90vw;
+    max-width: 1400px;
   }
 }
 

@@ -253,3 +253,30 @@ document.querySelectorAll(".site-faq__question").forEach(btn => {
   });
 });
 
+
+
+// Inicijalizacija EmailJS
+(function(){
+  emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY); // zameni sa tvojim
+})();
+
+// Selektuj formu po ID-u
+const form = document.getElementById("newsletter-form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // sprečava reload stranice
+
+  emailjs.sendForm(
+    "service_27djwtk",    // zameni sa tvojim
+    "template_npu2r75",   // zameni sa tvojim
+    this
+  )
+  .then(() => {
+    alert("Email uspešno poslat!"); 
+    form.reset(); // prazni formu
+  })
+  .catch((error) => {
+    console.error("Greška:", error);
+    alert("Došlo je do greške pri slanju.");
+  });
+});
