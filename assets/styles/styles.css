@@ -904,14 +904,28 @@ Reserve Section
   width: 100%;
 } 
 
+
 .mac-mockup img {
   width: 100%;
   display: block;
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
 } 
 
+@media (min-width: 1024px) {
+  .mac-mockup {
+    max-width: none;
+    width: 80%;
+  }
+}
+
+
+
+
 /* Rezerviši button */
 .reserve-btn {
+  display: inline-block;
+  min-width: 280px;   /* ili 300px */
+  text-align: center;
   background: #91693B;
   color: #ECDFC0;
   border: none;
