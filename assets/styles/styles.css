@@ -66,8 +66,17 @@ body {
 .nav-logo {
   width: 36px;
   height: 36px;
-  object-fit: contain;
+  object-fit: cover;      /* bolje za krug, punjenje bez deformacije */
+  border-radius: 50%;     /* čini sliku savršeno kružnom */
+  border: 1px solid #906A3A; /* tanka bordo/tamna ivica oko loga */
+  transition: transform 0.3s ease; /* opcionalno, za hover efekat */
 }
+
+/* Hover efekat (malo uvećanje loga) */
+.nav-logo:hover {
+  transform: scale(1.1);
+}
+
 
 .nav-title {
   font-weight: 600;
