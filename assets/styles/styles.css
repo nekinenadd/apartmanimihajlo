@@ -571,7 +571,7 @@ body {
 }
 
 .amenities-sub {
-  color: #666;
+  color: var(--accent);
   margin-bottom: 2.5rem;
 }
 
