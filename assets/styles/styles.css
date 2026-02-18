@@ -1357,14 +1357,14 @@ Responsive / Desktop
   line-height: 1.6;
 }
 
-.newsletter-form {
+#newsletter-form {
   display: flex;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.newsletter-form input {
+#newsletter-form input {
   padding: 14px 16px;
   width: 280px;
   border: 1px solid var(--accent);
@@ -1373,12 +1373,12 @@ Responsive / Desktop
   outline: none;
 }
 
-.newsletter-form input:focus {
+#newsletter-form input:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 2px rgba(144, 106, 58, 0.2);
 }
 
-.newsletter-form button {
+#newsletter-form button {
   padding: 14px 24px;
   background-color: var(--accent);
   color: var(--bg);
@@ -1389,7 +1389,7 @@ Responsive / Desktop
   transition: 0.3s ease;
 }
 
-.newsletter-form button:hover {
+#newsletter-form button:hover {
   background-color: #7a5830;
 }
 
