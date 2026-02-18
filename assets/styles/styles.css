@@ -4,12 +4,19 @@
   --bg: #ffffff; /* white background */
   --text: #111111; /* default text color */
 }
+html {
+scroll-behavior: smooth;
+}
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+   scroll-snap-type: y mandatory; /* snap po vertikali */
+  overflow-y: scroll;           /* omogućava scroll */
+  height: 100vh;                /* visina ekrana */
 }
+
 
 /* Page content */
 .page-content {
@@ -411,6 +418,8 @@ body {
 /* Second end ? section */
 
 .third-section {
+  scroll-snap-align: start;
+  min-height: 100vh; /* svaka sekcija zauzima bar visinu ekrana */
   gap: 10px;
   position: relative;
   min-height: 100vh;
@@ -487,6 +496,12 @@ body {
   max-height: 100%;
   object-fit: contain;         /* NO stretching */
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.review img:hover {
+  transform: scale(1.05); /* povećaj za 5% na hover */
+  z-index: 10; /* da se izvuče preko drugih */
 }
 
 @media (max-width: 768px) {
