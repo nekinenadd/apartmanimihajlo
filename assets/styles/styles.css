@@ -15,6 +15,7 @@ body {
    scroll-snap-type: y mandatory; /* snap po vertikali */
   overflow-y: scroll;           /* omogućava scroll */
   height: 100vh;                /* visina ekrana */
+  padding: 0;
 }
 
 
@@ -312,7 +313,9 @@ body {
   font-size: 0.85rem;
   margin-bottom: 1rem;
   opacity: 0.85;
+  font-style: italic;
 }
+
 
 /* MAIN TITLE */
 .hero-title {
@@ -427,16 +430,32 @@ body {
 /* Second end ? section */
 
 .third-section {
+  padding-top: 2rem;    /* ranije je verovatno 4-5rem */
+  padding-bottom: 2rem; /* smanjuje visinu sa dna */
+  margin: 0;
   scroll-snap-align: start;
-  min-height: 100vh; /* svaka sekcija zauzima bar visinu ekrana */
+  min-height: 80vh; /* svaka sekcija zauzima bar visinu ekrana */
   gap: 10px;
   position: relative;
-  min-height: 100vh;
   background: #906A3A;
   background: linear-gradient(4deg,rgba(144, 106, 58, 1) 0%, rgba(239, 222, 187, 1) 100%);
   overflow: hidden;
   display: flex;
   align-items: center;
+}
+
+.third-section .hero-content h1,
+.third-section .hero-content p,
+.third-section .hero-content .hero-eyebrow,
+.third-section .hero-content .hero-description {
+  margin-top: 0;
+  margin-bottom: 1rem; /* manji razmak između linija */
+  line-height: 1.4;    /* kompaktni redovi */
+}
+
+/* Ako želiš da ceo sadržaj bude još kompaktniji */
+.third-section .hero-content {
+  padding: 0;           /* uklanja dodatni padding container-a */
 }
 
 
@@ -585,6 +604,7 @@ body {
 .amenities {
   background: #ffffff;
   gap: 10px;
+  padding-bottom: 1rem;
 }
 
 .amenities h2 {
