@@ -638,7 +638,7 @@ body {
 .amenity-card:hover .amenity-overlay span,
 .amenity-card:active .amenity-overlay span {
   opacity: 0;
-  transform: scale(0.9); /* opcionalno da malo “padne” */
+   /* opcionalno da malo “padne” */
 }
 
 
