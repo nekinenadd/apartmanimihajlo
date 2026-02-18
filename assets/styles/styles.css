@@ -446,6 +446,9 @@ body {
   background: #ffffff; /* keep white background */
   color: var(--text);
 }
+.customer-care h3 {
+  margin-top: 1.5rem; /* prostor iznad naslova */
+}
 
 .customer-care .care-img {
   width: 100%;
