@@ -450,7 +450,7 @@ body {
   transform: scale(1.02);
 }
 
-.customer-care h2 {
+.customer-care h3 {
   font-size: 1.8rem;
   color: var(--accent);
   margin-bottom: 1rem;
@@ -496,12 +496,6 @@ body {
   max-height: 100%;
   object-fit: contain;         /* NO stretching */
   display: block;
-  transition: transform 0.3s ease;
-}
-
-.review img:hover {
-  transform: scale(1.05); /* povećaj za 5% na hover */
-  z-index: 10; /* da se izvuče preko drugih */
 }
 
 @media (max-width: 768px) {
